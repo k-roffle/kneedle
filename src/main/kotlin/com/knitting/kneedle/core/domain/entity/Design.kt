@@ -8,8 +8,8 @@ import com.knitting.kneedle.core.domain.value.unit.Size
 import java.time.OffsetDateTime
 
 data class Design(
-    val id: Long? = null,
-    val knitterId: Long,
+    val id: String,
+    val knitterId: String,
     val name: String,
     val designType: DesignType,
     val patternType: PatternType,
@@ -73,7 +73,7 @@ data class Design(
 
     companion object {
         fun new(
-            knitterId: Long,
+            knitterId: String,
             name: String,
             designType: DesignType,
             patternType: PatternType,
@@ -89,7 +89,7 @@ data class Design(
             coverImageUrl: String,
             techniques: List<Technique>,
         ) = Design(
-            id = null,
+            id = "",
             knitterId = knitterId,
             name = name,
             designType = designType,

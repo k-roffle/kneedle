@@ -1,7 +1,16 @@
+server:
+  ssl:
+    enabled: true
+    key-store: /home/letsencrypt.jks
+    key-store-password: ${KNITTING_SSL_KEY_STORE_PASSWORD}
+    key-password: ${KNITTING_SSL_KEY_PASSWORD}
+  error:
+    include-message: always
+
 spring:
   data:
     mongodb:
-      uri: mongodb://kneedle:kneedle@localhost/?ssl=false
+      uri: ${KNITTING_MONGODB_URI:mongodb://kneedle:kneedle@localhost/?ssl=false}
       database: kneedle
 jwt:
   secret-key: kneedle

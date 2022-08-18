@@ -1,4 +1,4 @@
-package com.knitting.kneedle.core.infra.repository
+package com.knitting.kneedle.core.infra.repository.knitter
 
 import com.knitting.kneedle.core.domain.entity.Knitter
 import com.knitting.kneedle.core.infra.document.toKnitterEntity

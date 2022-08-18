@@ -4,10 +4,10 @@ import com.knitting.kneedle.core.domain.helper.DraftValueReader
 import java.time.OffsetDateTime
 
 data class DraftDesign(
-    val id: Long? = null,
-    val knitterId: Long,
+    val id: String,
+    val knitterId: String,
     val value: String,
-    val designId: Long?,
+    val designId: String?,
     val createdAt: OffsetDateTime?,
     val updatedAt: OffsetDateTime?,
 ) {
@@ -25,9 +25,9 @@ data class DraftDesign(
     ) : DraftValueReader.TruncatedValue()
 
     companion object {
-        fun new(knitterId: Long, designId: Long?, value: String): DraftDesign =
+        fun new(knitterId: String, designId: String?, value: String): DraftDesign =
             DraftDesign(
-                id = null,
+                id = "",
                 knitterId = knitterId,
                 designId = designId,
                 value = value,

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 class CertController(
     private val certProperties: CertProperties,
 ) {
-    @GetMapping(".well-known/acme-challenge/Fk4ql_Mo4IDQ9i6AwKS3p2WtrLu5456uHLmP1XKt-ts")
+    @GetMapping(".well-known/acme-challenge/aHbmbOpY1OKIgLcx0eNOsSM6KA_yaeIkaEM0ZYaTJE8")
     suspend fun applyHttps(): String = certProperties.secret
 
     @ConstructorBinding

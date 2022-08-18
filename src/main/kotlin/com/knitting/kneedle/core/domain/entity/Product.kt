@@ -9,8 +9,8 @@ import com.knitting.kneedle.core.domain.value.item.ProductItem
 import java.time.OffsetDateTime
 
 data class Product(
-    val id: Long? = null,
-    val knitterId: Long,
+    val id: String,
+    val knitterId: String,
     val name: String,
     val fullPrice: Money,
     val discountPrice: Money,
@@ -84,7 +84,7 @@ data class Product(
 
     companion object {
         fun new(
-            knitterId: Long,
+            knitterId: String,
             name: String,
             fullPrice: Money,
             discountPrice: Money,
@@ -96,7 +96,7 @@ data class Product(
             items: List<ProductItem>,
         ): Product {
             return Product(
-                id = null,
+                id = "",
                 knitterId = knitterId,
                 name = name,
                 fullPrice = fullPrice,

@@ -1,0 +1,16 @@
+package com.knitting.kneedle.common.pagination
+
+import java.lang.IllegalArgumentException
+
+data class Paging(
+    val after: String?,
+    val count: Int,
+) {
+    constructor(after: String?, count: Int?) : this(after, count ?: 10)
+
+    init {
+        require(this.count in 1..30) {
+            throw IllegalArgumentException("Count must be between 1 and 30")
+        }
+    }
+}
