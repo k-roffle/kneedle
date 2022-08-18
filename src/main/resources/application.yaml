@@ -1,0 +1,35 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://kneedle:kneedle@localhost/?ssl=false
+      database: kneedle
+jwt:
+  secret-key: kneedle
+
+cert:
+  secret: ${KNITTING_CERT_SECRET}
+
+google:
+  o-auth-client:
+    host: https://oauth2.googleapis.com
+    timeout: 5000
+  api-client:
+    host: https://www.googleapis.com
+    timeout: 5000
+  gcp:
+    client-id: 1036534335923-fcacoteap126dnkl0ttuouaguercstbi.apps.googleusercontent.com
+    secret-key: ${KNITTING_GOOGLE_CLIENT_SECRET}
+  authorization-uri:
+    host: accounts.google.com
+    scheme: https
+    path: /o/oauth2/v2/auth
+    scopes:
+      - "profile"
+      - "https://www.googleapis.com/auth/userinfo.email"
+    access-type: offline
+    include-granted-scopes: true
+    response-type: code
+  redirect-uri:
+    host: knitting-314112.web.app
+    scheme: https # local 인 경우 http
+    path: /login/redirected
