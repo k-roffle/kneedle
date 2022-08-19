@@ -1,4 +1,4 @@
-package com.knitting.kneedle.core.domain.exception.product
+package com.knitting.kneedle.core.domain.exception
 
 import com.knitting.kneedle.common.exception.DomainException
 

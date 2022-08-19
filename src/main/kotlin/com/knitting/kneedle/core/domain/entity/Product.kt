@@ -1,8 +1,8 @@
 package com.knitting.kneedle.core.domain.entity
 
-import com.knitting.kneedle.core.domain.exception.product.InvalidDiscountPrice
-import com.knitting.kneedle.core.domain.exception.product.InvalidFullPrice
-import com.knitting.kneedle.core.domain.exception.product.InvalidPeriod
+import com.knitting.kneedle.core.domain.exception.InvalidDiscountPrice
+import com.knitting.kneedle.core.domain.exception.InvalidFullPrice
+import com.knitting.kneedle.core.domain.exception.InvalidPeriod
 import com.knitting.kneedle.core.domain.value.Money
 import com.knitting.kneedle.core.domain.value.ProductTag
 import com.knitting.kneedle.core.domain.value.item.ProductItem
