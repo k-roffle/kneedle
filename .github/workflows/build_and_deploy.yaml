@@ -47,7 +47,7 @@ jobs:
           build-args: |
             JWT_SECRET_KEY=${{ secrets.JWT_SECRET_KEY }}
             GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}
-            POSTGRESQL_PASSWORD=${{ secrets.POSTGRESQL_PASSWORD }}
+            KNITTING_MONGODB_URI=${{ secrets.KNITTING_MONGODB_URI }}
             SSL_KEY_STORE_PASSWORD=${{ secrets.SSL_KEY_STORE_PASSWORD }}
             SSL_KEY_PASSWORD=${{ secrets.SSL_KEY_PASSWORD }}
             CERT_SECRET=${{ secrets.CERT_SECRET }}
