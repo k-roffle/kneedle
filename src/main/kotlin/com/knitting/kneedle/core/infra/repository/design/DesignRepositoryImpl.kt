@@ -47,4 +47,7 @@ class DesignRepositoryImpl(
         }
         return designs.map(DesignDocument::toDesign)
     }
+
+    override fun countMyDesigns(knitterId: String): Int =
+        designRepository.countByKnitterId(knitterId)
 }

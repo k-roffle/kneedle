@@ -51,4 +51,15 @@ class ProductRepositoryImpl(
 
         return productDocuments.map { it.toProduct() }
     }
+
+    override fun countMyProducts(knitterId: String): Int =
+        productRepository.countByKnitterId(knitterId)
+
+    override fun countPurchasedProducts(knitterId: String): Int {
+        // TODO("Not yet implemented")
+        return 0
+    }
+
+    override fun findRegisteredProduct(knitterId: String): List<Product> =
+        productRepository.findAll().map { it.toProduct() }
 }

@@ -8,4 +8,5 @@ interface ProductMongoRepository : MongoRepository<ProductDocument, String> {
     fun findByIdAndKnitterId(id: String, knitterId: String): ProductDocument?
     fun findAllByKnitterId(knitterId: String, pageable: Pageable): List<ProductDocument>
     fun findAllByKnitterIdAndIdBefore(knitterId: String, id: String, pageable: Pageable): List<ProductDocument>
+    fun countByKnitterId(knitterId: String): Int
 }
