@@ -1,0 +1,13 @@
+server:
+  ssl:
+    enabled: false
+
+jwt:
+  secret-key: secretkey
+
+google:
+  gcp:
+    secret-key: secretkey
+  redirect-uri:
+    host: localhost:1909
+    scheme: http
