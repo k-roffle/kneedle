@@ -3,6 +3,16 @@ package com.knitting.kneedle.core.domain.entity
 import com.knitting.kneedle.core.domain.helper.DraftValueReader
 import java.time.OffsetDateTime
 
+/**
+ * 도안 임시저장
+ *
+ * @property id 식별자
+ * @property knitterId 사용자 id
+ * @property value 입력 중인 데이터
+ * @property designId 수정하는 대상 도안, null 인 경우 신규 생성을 위한 임시저장 데이터
+ * @property createdAt 생성 시각
+ * @property updatedAt 수정 시각
+ */
 data class DraftDesign(
     val id: String,
     val knitterId: String,

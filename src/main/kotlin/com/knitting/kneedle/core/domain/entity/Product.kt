@@ -8,6 +8,23 @@ import com.knitting.kneedle.core.domain.value.ProductTag
 import com.knitting.kneedle.core.domain.value.item.ProductItem
 import java.time.OffsetDateTime
 
+/**
+ * 상품
+ *
+ * @property id 식별자
+ * @property knitterId 사용자 id
+ * @property name 상품 이름
+ * @property fullPrice 정가
+ * @property discountPrice 판매가 (할인가)
+ * @property representativeImageUrl 대표 이미지
+ * @property specifiedSalesStartedAt 판매 시작일
+ * @property specifiedSalesEndedAt 판매 종료일
+ * @property content 상품 소개글
+ * @property tags 관련 태그
+ * @property items 판매하는 상품
+ * @property createdAt 생성 시각
+ * @property updatedAt 수정 시각
+ */
 data class Product(
     val id: String,
     val knitterId: String,

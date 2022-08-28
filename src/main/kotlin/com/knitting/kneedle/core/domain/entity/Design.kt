@@ -7,6 +7,28 @@ import com.knitting.kneedle.core.domain.value.unit.Gauge
 import com.knitting.kneedle.core.domain.value.unit.Size
 import java.time.OffsetDateTime
 
+/**
+ * 도안
+ *
+ * @property id 식별자
+ * @property knitterId 사용자 id
+ * @property name 도안 이름
+ * @property designType 편물 종류
+ * @property patternType 도안 종류 (ex> 서술형, 이미지 ..)
+ * @property gauge 사용된 게이지
+ * @property size 편물 사이즈
+ * @property needle 사용한 바늘
+ * @property yarn 사용한 실
+ * @property extra 추가재료
+ * @property price 도안 가격
+ * @property pattern 도안 내용
+ * @property description 도안 한 줄 소개
+ * @property targetLevel 난이도
+ * @property coverImageUrl 대표 이미지
+ * @property techniques 사용된 기법
+ * @property updatedAt 수정 시각
+ * @property createdAt 생성 시각
+ */
 data class Design(
     val id: String,
     val knitterId: String,
