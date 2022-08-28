@@ -11,6 +11,8 @@ import com.knitting.kneedle.core.controller.product.mapper.ProductRequestMapper
 import com.knitting.kneedle.core.controller.product.mapper.ProductResponseMapper
 import com.knitting.kneedle.core.usecase.product.DraftProductService
 import com.knitting.kneedle.core.usecase.product.ProductService
+import javax.validation.constraints.Max
+import javax.validation.constraints.Min
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -61,7 +63,7 @@ class ProductController(
     suspend fun getMyProducts(
         @Authenticated user: AuthenticatedUser,
         @RequestParam after: String?,
-        @RequestParam count: Int?,
+        @RequestParam @Min(1) @Max(30) count: Int?,
     ) = withJsonResponse {
         val request = ProductRequestMapper.toGetMyProductsData(Paging(after, count), user.knitterId)
         productService
