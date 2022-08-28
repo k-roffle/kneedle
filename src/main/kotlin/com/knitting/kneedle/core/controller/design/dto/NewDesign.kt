@@ -9,20 +9,20 @@ object NewDesign {
     @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy::class)
     data class Request(
         val name: String,
+        val coverImageUrl: String,
+        val description: String?,
+        val price: Int,
         val designType: Design.DesignType,
         val patternType: Design.PatternType,
         val stitches: Double,
         val rows: Double,
-        val size: SizeDto,
         val needle: String,
-        val yarn: String,
+        val techniques: List<String>?,
+        val targetLevel: Design.LevelType?,
+        val yarn: String?,
         val extra: String?,
-        val price: Int,
+        val size: SizeDto?,
         val pattern: String,
-        val description: String,
-        val targetLevel: Design.LevelType,
-        val coverImageUrl: String,
-        val techniques: List<String>,
         val draftId: String?,
     )
 

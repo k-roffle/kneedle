@@ -29,7 +29,7 @@ object DesignRequestMapper {
                     stitches = stitches,
                     rows = rows,
                 ),
-                size = toDomainFromDto(size),
+                size = size?.let { toDomainFromDto(size) },
                 needle = needle,
                 yarn = yarn,
                 extra = extra,
@@ -38,7 +38,7 @@ object DesignRequestMapper {
                 description = description,
                 targetLevel = targetLevel,
                 coverImageUrl = coverImageUrl,
-                techniques = techniques.map { technique -> Technique(technique) },
+                techniques = techniques?.map { technique -> Technique(technique) },
                 draftId = draftId,
             )
         }

@@ -10,7 +10,7 @@ object MyDesigns {
     data class Response(
         val id: String,
         val name: String,
-        val yarn: String,
+        val yarn: String?,
         val coverImageUrl: String,
         val tags: List<String>,
         val price: Int,

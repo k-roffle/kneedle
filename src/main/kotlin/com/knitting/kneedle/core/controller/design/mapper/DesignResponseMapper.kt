@@ -40,7 +40,7 @@ object DesignResponseMapper {
                 designType = designType,
                 patternType = patternType,
                 gauge = gauge,
-                size = toDtoFromDomain(size),
+                size = size?.let { toDtoFromDomain(it) },
                 needle = needle,
                 yarn = yarn,
                 extra = extra,
