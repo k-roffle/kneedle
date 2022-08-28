@@ -17,6 +17,12 @@ object ResponseHelper : Loggable {
             process()
         } catch (exception: BaseException) {
             throw ResponseStatusException(exception.httpStatus, exception.message)
+        } catch (exception: IllegalArgumentException) {
+            log.error(exception.stackTraceToString())
+            throw ResponseStatusException(
+                HttpStatus.BAD_REQUEST,
+                exception.message ?: "Check your request format."
+            )
         } catch (exception: Exception) {
             log.error(exception.stackTraceToString())
             throw ResponseStatusException(
