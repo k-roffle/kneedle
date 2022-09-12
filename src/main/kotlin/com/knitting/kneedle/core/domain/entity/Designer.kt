@@ -22,4 +22,21 @@ data class Designer(
     val account: Account,
     val createdAt: OffsetDateTime?,
     val updatedAt: OffsetDateTime?,
-)
+) {
+    companion object {
+        fun create(
+            knitter: Knitter,
+            nickname: String,
+            selfIntroduction: String,
+            account: Account,
+        ) = Designer(
+            id = "",
+            knitterId = knitter.id,
+            nickname = nickname,
+            selfIntroduction = selfIntroduction,
+            account = account,
+            createdAt = OffsetDateTime.now(),
+            updatedAt = OffsetDateTime.now(),
+        )
+    }
+}
